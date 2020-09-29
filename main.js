@@ -18,3 +18,7 @@ $('.modal-overlay, .modal .close, .modal .close-modal').click(function(){
 $('.mobile-menu').click(function(){
     $('.col.left').toggleClass('show')
 })
+
+$('.col.mid').click(function(){
+    $('.col.left').removeClass('show')
+})
