@@ -63,7 +63,7 @@ body{
     width: 100%;
     z-index: 2;
 
-    @media(max-width: 576px) {
+    @media(max-width: 650px) {
         padding: 16px 24px !important;
     }
 
@@ -76,7 +76,7 @@ body{
 
     .mobile-search{
         display: none;
-        @media(max-width: 576px) {
+        @media(max-width: 650px) {
             display: unset;
         }
     }
@@ -85,7 +85,7 @@ body{
         flex: 1;
         max-width: 500px;
         margin: 0 32px;
-        @media(max-width: 576px) {
+        @media(max-width: 650px) {
             display: none;
         }
         input{
@@ -111,15 +111,14 @@ body{
         max-width: 888px;
     }
 
-    @media(max-width: 576px) {
+    @media(max-width: 650px) {
         margin: 77px auto 0;
     }
 
     .col{
-        padding: 0 32px;
+        padding: 32px 0 0;
         height: calc(100vh - 86px);
-        @media(max-width: 576px) {
-            padding: 0 24px !important;
+        @media(max-width: 650px) {
             height: calc(100vh - 77px);
         }
 
@@ -128,6 +127,10 @@ body{
             flex: 0;
             background-color: $neutral-400;
             transition: $transition;
+
+            .card{
+                height: 64px;
+            }
 
             @media(max-width: 1176px) {
                 position: fixed;
@@ -142,7 +145,7 @@ body{
                 }
             }
 
-            @media(max-width: 576px) {
+            @media(max-width: 650px) {
                 top: 77px;
             }
         }
@@ -150,8 +153,12 @@ body{
             min-width: 288px;
             flex: 0;
             background-color: $neutral-400;
+            
+            .card{
+                height: 250px;
+            }
 
-            @media(max-width: 576px) {
+            @media(max-width: 650px) {
                 display: none;
             }
         }
@@ -159,6 +166,28 @@ body{
             flex: 1;
             max-width: 600px;
             background-color: $neutral-300;
+            margin: 0 32px;
+
+            @media(max-width: 1176px) {
+                margin-left: 0;
+            }
+
+            @media(max-width: 650px) {
+                margin-right: 0;
+                padding: 16px;
+            }
+
+            .card{
+                height: 300px;
+            }
+        }
+
+        .card {
+            padding: 16px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: $shadow-low;
+            margin-bottom: 24px;
         }
     }
 }
